@@ -105,4 +105,13 @@ export class Usuario {
             
         });*/
     }
+    public obtenerAlbumPorNombre(nombre: String){
+        
+        for (var i = 0; i < this.albumes.length; i++){
+            if (this.albumes[i].getNombre() == nombre ){
+                return this.albumes[i];
+            }
+        }
+
+    }
 }

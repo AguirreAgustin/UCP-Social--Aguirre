@@ -30,6 +30,21 @@ describe('Usuario', () => {
 
         }); 
 });
+describe('Usuario', () => {
+ 
+    it('1.1 Obtener un album por el nombre', () => {
+        let usuario = new Usuario();
+        usuario.agregarAlbum("Album 1");
+        usuario.agregarAlbum("Album 2");
+        usuario.agregarAlbum("Album 3");
+        usuario.agregarAlbum("Album 4");
+        usuario.agregarAlbum("Album 22");
+
+        var nombre = usuario.obtenerAlbumPorNombre("Album 22").getNombre();
+
+        expect(nombre).to.equal("Album 22");
+    });  
+});
 
 /*describe('Usuario', () => {
     it('Debe crear otro usuario', () => {
