@@ -130,4 +130,25 @@ export class Usuario {
 
     }
 
+    public agregar10Albums(){
+
+        var i;
+        var nombre;
+
+        
+
+        for (i = 1; i < 11; i++){
+        
+            nombre = "Album " + i.toString();
+
+            let album = new Album(nombre);
+
+            this.albumes.push(album);
+
+        }
+
+        
+
+    }
+
 }

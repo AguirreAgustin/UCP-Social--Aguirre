@@ -78,3 +78,18 @@ describe('Usuario', () => {
 
         }); 
 });
+
+describe('Usuario', () => {
+ 
+    it('1.6 Agregar 10 albums con nombre "Album X"', () => {
+        let usuario = new Usuario();
+
+
+        usuario.agregar10Albums();
+        
+        
+        expect(usuario.getAlbum().length).to.equal(10);
+        expect(usuario.obtenerAlbumPorNombre("Album 10").getNombre()).to.equal("Album 10");
+        
+    });  
+});
