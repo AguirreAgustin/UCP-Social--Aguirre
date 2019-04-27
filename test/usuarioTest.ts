@@ -64,3 +64,17 @@ describe('Usuario', () => {
         expect(tamanioDelArray).to.equal(4);
     });  
 });
+describe('Usuario', () => {
+    it('1.5 No quitar un album que no existe', () => {
+            let usuario = new Usuario();
+            usuario.agregarAlbum("Album 1");
+            usuario.agregarAlbum("Album 2");
+            usuario.agregarAlbum("Album 3");
+            
+            
+            usuario.quitarAlbum("Album 1588");
+            expect(usuario.getAlbum().length).to.equals(3);
+            
+
+        }); 
+});
