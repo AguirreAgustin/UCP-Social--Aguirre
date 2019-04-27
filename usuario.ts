@@ -150,5 +150,11 @@ export class Usuario {
         
 
     }
+    public agregarImagenEnAlbum(nombre: String , album: String){
+
+
+            this.obtenerAlbumPorNombre(album).agregarImagen(nombre);
+    
+    }
 
 }
