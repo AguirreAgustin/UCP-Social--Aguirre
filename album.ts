@@ -46,4 +46,13 @@ export class Album {
         }
 
     }
+    public quitarImagenPorNombre(nombre: String){
+        var i;
+        for (i = 0; i < this.imagenes.length; i++){
+            if (this.imagenes[i] == nombre ){
+                this.imagenes.splice(i,1);
+            }
+        }
+
+    }
 }

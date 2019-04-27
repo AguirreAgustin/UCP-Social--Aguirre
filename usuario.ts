@@ -157,4 +157,11 @@ export class Usuario {
     
     }
 
+    public quitarImagenEnAlbum(nombre: String , album: String){
+
+
+        this.obtenerAlbumPorNombre(album).quitarImagenPorNombre(nombre);
+
+    }
+
 }
