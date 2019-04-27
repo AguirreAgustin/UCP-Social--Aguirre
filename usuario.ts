@@ -86,4 +86,23 @@ export class Usuario {
         this.albumes.push(album);
 
     }
+
+    public quitarAlbum(nombre: String){
+        for (var i = 0; i < this.albumes.length; i++){
+            if(this.albumes[i].getNombre()== nombre){
+                this.albumes.splice(i,1);
+            }
+
+        }
+
+
+        /*this.albumes.forEach(function(value){
+            var i = value;
+            var l = this.getAlbum().length;
+            if(( l -1 ) == i){
+                this.albumes.pop;
+            }
+            
+        });*/
+    }
 }
