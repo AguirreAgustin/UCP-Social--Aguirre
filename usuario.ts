@@ -95,7 +95,7 @@ export class Usuario {
             let album = new Album(nombre);
 
             this.albumes.push(album);
-            
+
         }
 
         
@@ -103,26 +103,17 @@ export class Usuario {
     }
 
     public quitarAlbum(nombre: String){
-        for (var i = 0; i < this.albumes.length; i++){
-            if(this.albumes[i].getNombre()== nombre){
-                this.albumes.splice(i,1);
+        var i;
+        for (i = 0; i < this.albumes.length; i++){
+            if (this.albumes[i].getNombre() == nombre ){
+                this.albumes.splice (i, 1);
             }
-
         }
-
-
-        /*this.albumes.forEach(function(value){
-            var i = value;
-            var l = this.getAlbum().length;
-            if(( l -1 ) == i){
-                this.albumes.pop;
-            }
-            
-        });*/
     }
+
     public obtenerAlbumPorNombre(nombre: String){
-        
-        for (var i = 0; i < this.albumes.length; i++){
+        var i;
+        for (i = 0; i < this.albumes.length; i++){
             if (this.albumes[i].getNombre() == nombre ){
                 return this.albumes[i];
             }
@@ -153,15 +144,14 @@ export class Usuario {
     public agregarImagenEnAlbum(nombre: String , album: String){
 
 
-            this.obtenerAlbumPorNombre(album).agregarImagen(nombre);
-    
-    }
+        this.obtenerAlbumPorNombre(album).agregarImagen(nombre);
 
+    }
     public quitarImagenEnAlbum(nombre: String , album: String){
 
 
         this.obtenerAlbumPorNombre(album).quitarImagenPorNombre(nombre);
 
     }
-
+    
 }
