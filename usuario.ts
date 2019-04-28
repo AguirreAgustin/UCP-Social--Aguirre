@@ -1,4 +1,5 @@
 import { Album } from './album';
+import { Muro } from './muro';
 
 export class Usuario {
     private nombre: String;
@@ -8,7 +9,8 @@ export class Usuario {
     private correo: String;
     private verificado: boolean;
     private verificador: String;
-    private albumes: Array<Album>;                                                   
+    private albumes: Array<Album>; 
+    private muro: Muro;                                                  
     /*constructor(nombre: String,apellido: String,intereses: String, correo: String, verificado: boolean,verificador: String) {
         this.setNombre;
         this.setApellido;
@@ -19,6 +21,7 @@ export class Usuario {
     }*/
     constructor(){
         this.setAlbumes(new Array<Album>());
+        this.setMuro(new Muro());
     }
      
     private setNombre (nombre : String) {
@@ -42,7 +45,9 @@ export class Usuario {
     private setVerificador (verificador : String) {
         this.verificador = verificador;
     }
-     
+    private setMuro(muro: Muro){
+        this.muro = muro;
+    } 
     public getNombre() : String {
         return this.nombre;
     }
@@ -63,6 +68,9 @@ export class Usuario {
     }
     public getVerificador() : String {
         return this.verificador;
+    }
+    public getMuro(): Muro{
+        return this.muro;
     }
 
     public generarEnlaceVerificador(){
@@ -163,4 +171,12 @@ export class Usuario {
         }
 
     }
+    public agregarImagenEnAlbumYposicionEspecifica(imagen : String,album : String,posicion : number){
+
+        this.obtenerAlbumPorNombre(album).agregarImagenEnPosicionEspecifica(imagen,posicion);
+        
+    }
+
+    
+    
 }
