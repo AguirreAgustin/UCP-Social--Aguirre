@@ -154,4 +154,13 @@ export class Usuario {
 
     }
     
+    public asignarFotoDePerfil(nombre: String){
+
+        var comprobar = this.obtenerAlbumPorNombre("Fotos de Perfil").obtenerImagenPorNombre(nombre);
+        
+        if(comprobar == nombre){
+            this.setImagen(nombre);
+        }
+
+    }
 }
