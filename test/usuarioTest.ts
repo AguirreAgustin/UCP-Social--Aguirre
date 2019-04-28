@@ -207,10 +207,10 @@ describe('Usuario', () => {
     it('2.1 Publicar una publicacion con fecha y contenido en el muro del usuario', () => {
         let usuario = new Usuario();
 
-        usuario.getMuro().agregarPublicacion("28/04/2019" , "[...]Contenido de la publicacion 1");
-        usuario.getMuro().agregarPublicacion("29/04/2019" , "[...]Contenido de la publicacion 2");
-        usuario.getMuro().agregarPublicacion("29/04/2019" , "[...]Contenido de la publicacion 3");
-        usuario.getMuro().agregarPublicacion("30/04/2019" , "[...]Contenido de la publicacion 4");    
+        usuario.getMuro().agregarPublicacion("28/04/2019" , "[...]Contenido de la publicacion 1",true);
+        usuario.getMuro().agregarPublicacion("29/04/2019" , "[...]Contenido de la publicacion 2",true);
+        usuario.getMuro().agregarPublicacion("29/04/2019" , "[...]Contenido de la publicacion 3",true);
+        usuario.getMuro().agregarPublicacion("30/04/2019" , "[...]Contenido de la publicacion 4",true);    
 
         expect(usuario.getMuro().getPublicaciones().length).to.equals(4);
 
